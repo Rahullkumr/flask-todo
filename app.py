@@ -12,7 +12,7 @@ class Todo(db.Model):
     sno = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(100), nullable = False)
     desc = db.Column(db.String(100), nullable = False)
-    date_created = db.Column(db.DateTime, default = datetime.utcnow)
+    priority = db.Column(db.String(100), nullable = False)
 
     def __repr__(self) -> str:
         return f"{self.sno} - {self.title}"
@@ -28,8 +28,9 @@ def hello_world():
         # title = request.form['name_attribute_of_input_tag']
         title = request.form['title']
         desc = request.form['desc']
+        priority = request.form['priority']
 
-        todo = Todo(title=title, desc=desc)
+        todo = Todo(title=title, desc=desc, priority=priority)
         db.session.add(todo)
         db.session.commit()
     allTodo = Todo.query.all()
