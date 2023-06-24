@@ -2,7 +2,7 @@
 
 Welcome to my shiny new Codespace running Flask! It has got everything fired up and running for exploring Flask.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with what you're seeing right now - where you go from here is up to you!
 
 Everything you do here is contained within this one codespace.
 To run this application:
@@ -68,7 +68,7 @@ then
 ```
 pip freeze > requirements.txt (it's good practice)
 ```
-# Let's deploy the app into Heroku
+# Let's deploy the app into Heroku(not free now)
 
 12. Create Procfile 
 This file is used by Heroku to deploy the application
